@@ -4,14 +4,14 @@ function temperature()
              //(CEL * 9/5) + 32
             var c = document.getElementById("celsius").value;
             var f = (c * 9/5) + 32
-            document.getElementById("fahrenheit").value = f
-
-            if (c == ""){
+              if (c == ""){
                 alert("Enter value for Celsius");
-                c.focus;
                 return false;
             }
-            return true
+            document.getElementById("fahrenheit").value = f
+
+            return false;      
+           
           }
 
 function weight()
@@ -20,30 +20,29 @@ function weight()
             // KG * 2.2
             var kg = document.getElementById("kilogram").value;
             var p = kg * 2.2
-            document.getElementById("pounds").value = p
-
-            if (kg == ""){
+             if (kg == ""){
                 alert("Please enter value for Kilogram");
-                kg.focus;
                 return false;
             }
-            return true;
+            document.getElementById("pounds").value = p
+
+            return false;
         }
 
 function distance()
         {
-            //To convert KMs to Miles
+        
+            //To convert Km to Miles
             // KM * 0.62137
             var km = document.getElementById("kilometer").value;
             var ml = km * 0.62137
-            document.getElementById("miles").value = ml
-
-            if (km == ""){
+             if (km == ""){
                 alert("Please nter value for Kilometer");
-                km.focus;
                 return false;
             }
-            return true;
+            document.getElementById("miles").value = ml
+
+            return false;
         }
         
         // function to clear celsius and fahrenheit fields
